@@ -49,9 +49,9 @@ export default function Navigation() {
               <button onClick={() => scrollToSection("projects")} className="text-slate-300 hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200">
                 Projects
               </button>
-              <button onClick={() => scrollToSection("blog")} className="text-slate-300 hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200">
+              {/* <button onClick={() => scrollToSection("blog")} className="text-slate-300 hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200">
                 Blog
-              </button>
+              </button> */}
               <button onClick={() => scrollToSection("contact")} className="text-slate-300 hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200">
                 Contact
               </button>
@@ -87,9 +87,9 @@ export default function Navigation() {
             <button onClick={() => scrollToSection("projects")} className="text-slate-300 hover:text-blue-400 block px-3 py-2 text-base font-medium transition-colors duration-200 w-full text-left">
               Projects
             </button>
-            <button onClick={() => scrollToSection("blog")} className="text-slate-300 hover:text-blue-400 block px-3 py-2 text-base font-medium transition-colors duration-200 w-full text-left">
+            {/* <button onClick={() => scrollToSection("blog")} className="text-slate-300 hover:text-blue-400 block px-3 py-2 text-base font-medium transition-colors duration-200 w-full text-left">
               Blog
-            </button>
+            </button> */}
             <button onClick={() => scrollToSection("contact")} className="text-slate-300 hover:text-blue-400 block px-3 py-2 text-base font-medium transition-colors duration-200 w-full text-left">
               Contact
             </button>

@@ -40,38 +40,50 @@ export class MemStorage implements IStorage {
   private initializeSampleData() {
     // Sample projects
     const sampleProjects: Project[] = [
+    
       {
         id: this.currentProjectId++,
-        title: "E-commerce Platform",
-        description: "A full-featured e-commerce platform built with Next.js, featuring user authentication, payment processing, inventory management, and admin dashboard.",
+        title: "Dzongkha Tracing Application",
+        description: "A mobile application built with React Native, featuring tracing of Dzongkha character and numbers, earning achivements, purchasing and equipping avtar border, and quizzes.",
         imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         demoUrl: "https://example-ecommerce.com",
-        githubUrl: "https://github.com/alexthompson/ecommerce-platform",
-        technologies: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
+        githubUrl: "https://github.com/Jimsss55/Tracing",
+        technologies: ["React Native", "Ruby on Rails","PostgreSQL"],
+        featured: true,
+        year: 2025,
+      },
+      {
+        id: this.currentProjectId++,
+        title: "Restaurant Application",
+        description: "A restaurant applcation featuring menu management, order processing, customer management and payment processing.",
+        imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        demoUrl: "https://example-ecommerce.com",
+        githubUrl: "https://github.com/Jimsss55/Restaurant-app",
+        technologies: ["Ruby", "Ruby on Rails","PostgreSQL"],
+        featured: true,
+        year: 2025,
+      },
+      {
+        id: this.currentProjectId++,
+        title: "CST Gym Application",
+        description: "A college gym application to manage real-time users, feedback management, inventory, equipment management and detailed analytics.",
+        imageUrl: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        demoUrl: "https://example-taskmanager.com",
+        githubUrl: "https://github.com/Jimsss55/GymMobileApp",
+        technologies: ["React Native", "Socket.io", "Postgres", "Express"],
         featured: true,
         year: 2024,
       },
       {
         id: this.currentProjectId++,
-        title: "Task Management App",
-        description: "A collaborative task management application with real-time updates, drag-and-drop functionality, team collaboration features, and detailed analytics.",
-        imageUrl: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        demoUrl: "https://example-taskmanager.com",
-        githubUrl: "https://github.com/alexthompson/task-manager",
-        technologies: ["React", "Socket.io", "MongoDB", "Express"],
-        featured: true,
-        year: 2023,
-      },
-      {
-        id: this.currentProjectId++,
-        title: "Analytics Dashboard",
-        description: "A comprehensive analytics dashboard for data visualization with interactive charts, real-time data processing, and customizable report generation.",
+        title: "Student Personal Information Management System",
+        description: "A web application for managing student personal information, including registration, personal details, and academic records.",
         imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         demoUrl: "https://example-analytics.com",
-        githubUrl: "https://github.com/alexthompson/analytics-dashboard",
-        technologies: ["D3.js", "Python", "FastAPI", "Redis"],
+        githubUrl: "https://github.com/Jimsss55/GymMobileApp",
+        technologies: ["React", "Postgres", "Express"],
         featured: true,
-        year: 2023,
+        year: 2022,
       },
     ];
 
@@ -157,7 +169,13 @@ export class MemStorage implements IStorage {
 
   async createProject(insertProject: InsertProject): Promise<Project> {
     const id = this.currentProjectId++;
-    const project: Project = { ...insertProject, id };
+    const project: Project = { 
+      ...insertProject, 
+      id,
+      demoUrl: insertProject.demoUrl ?? null,
+      githubUrl: insertProject.githubUrl ?? null,
+      featured: insertProject.featured ?? null,
+    };
     this.projects.set(id, project);
     return project;
   }

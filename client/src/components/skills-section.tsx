@@ -32,7 +32,7 @@ export default function SkillsSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => {
             const IconComponent = iconMap[category.icon as keyof typeof iconMap];
             

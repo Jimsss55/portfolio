@@ -57,8 +57,8 @@ export default function ProjectsSection() {
             ))
           ) : (
             projects?.map((project) => {
-              const colorClass = project.title.includes("E-commerce") ? "blue" : 
-                               project.title.includes("Task") ? "emerald" : "purple";
+              const colorClass = (project.title.includes("Dzongkha Tracing Application") || project.title.includes("CST Gym Application")) ? "blue" : 
+                               (project.title.includes("Restaurant Application") || project.title.includes("Student Personal Information Management System") ? "emerald" : "purple");
               
               return (
                 <div 
@@ -73,7 +73,7 @@ export default function ProjectsSection() {
                     />
                     <div className={`absolute inset-0 bg-${colorClass}-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center`}>
                       <div className="flex space-x-4">
-                        {project.demoUrl && (
+                        {/* {project.demoUrl && (
                           <a 
                             href={project.demoUrl} 
                             target="_blank" 
@@ -82,7 +82,7 @@ export default function ProjectsSection() {
                           >
                             <ExternalLink className="text-white w-5 h-5" />
                           </a>
-                        )}
+                        )} */}
                         {project.githubUrl && (
                           <a 
                             href={project.githubUrl} 
@@ -121,7 +121,7 @@ export default function ProjectsSection() {
                             <Github size={16} /> Code
                           </a>
                         )}
-                        {project.demoUrl && (
+                        {/* {project.demoUrl && (
                           <a 
                             href={project.demoUrl} 
                             target="_blank" 
@@ -130,7 +130,7 @@ export default function ProjectsSection() {
                           >
                             <ExternalLink size={16} /> Demo
                           </a>
-                        )}
+                        )} */}
                       </div>
                       <span className="text-sm text-slate-500">{project.year}</span>
                     </div>
@@ -143,7 +143,7 @@ export default function ProjectsSection() {
         
         <div className="text-center mt-12">
           <a 
-            href="https://github.com/alexthompson" 
+            href="https://github.com/Jimsss55" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900 rounded-lg transition-all duration-300"

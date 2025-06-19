@@ -11,14 +11,14 @@ export default function AboutSection() {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h3 className="text-2xl font-semibold mb-6 text-blue-400">Hello, I'm Alex</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-blue-400">Hello, I'm Jimpa</h3>
             <div className="space-y-6 text-slate-300 leading-relaxed">
               <p>{personalInfo.bio.paragraph1}</p>
               <p>{personalInfo.bio.paragraph2}</p>
               <p>{personalInfo.bio.paragraph3}</p>
             </div>
             
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <h4 className="text-lg font-semibold mb-4 text-slate-200">Quick Stats</h4>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
@@ -38,7 +38,7 @@ export default function AboutSection() {
                   <div className="text-sm text-slate-400">Tech Articles</div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           
           <div>

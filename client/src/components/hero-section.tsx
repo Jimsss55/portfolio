@@ -7,7 +7,7 @@ export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   
-  const titles = ["Full Stack Developer", "React Specialist", "UI/UX Enthusiast", "Problem Solver"];
+  const titles = ["Full Stack Developer", "Problem Solver"];
 
   useEffect(() => {
     const currentTitle = titles[currentIndex];
@@ -100,14 +100,14 @@ export default function HeroSection() {
             >
               <Linkedin size={24} />
             </a>
-            <a 
+            {/* <a 
               href={personalInfo.socialLinks.twitter} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-slate-400 hover:text-blue-400 transition-colors duration-200 text-2xl"
             >
               <Twitter size={24} />
-            </a>
+            </a> */}
             <a 
               href={personalInfo.socialLinks.email}
               className="text-slate-400 hover:text-blue-400 transition-colors duration-200 text-2xl"

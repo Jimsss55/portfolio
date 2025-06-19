@@ -46,12 +46,12 @@ export default function Footer() {
               >
                 Projects
               </button>
-              <button 
+              {/* <button 
                 onClick={() => scrollToSection("blog")} 
                 className="block text-slate-400 hover:text-blue-400 transition-colors duration-200 text-left"
               >
                 Blog
-              </button>
+              </button> */}
               <button 
                 onClick={() => scrollToSection("contact")} 
                 className="block text-slate-400 hover:text-blue-400 transition-colors duration-200 text-left"
@@ -80,14 +80,14 @@ export default function Footer() {
               >
                 <Linkedin size={24} />
               </a>
-              <a 
+              {/* <a 
                 href={personalInfo.socialLinks.twitter} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-blue-400 transition-colors duration-200 text-xl"
               >
                 <Twitter size={24} />
-              </a>
+              </a> */}
               <a 
                 href={personalInfo.socialLinks.email}
                 className="text-slate-400 hover:text-blue-400 transition-colors duration-200 text-xl"
@@ -107,7 +107,7 @@ export default function Footer() {
         
         <div className="border-t border-slate-800 pt-8 text-center">
           <p className="text-slate-400">
-            © 2024 {personalInfo.name}. All rights reserved. 
+            © 2025 {personalInfo.name}. All rights reserved. 
             <span className="hidden sm:inline"> Built with React, Express.js and Tailwind CSS.</span>
           </p>
         </div>
